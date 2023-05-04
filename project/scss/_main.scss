@@ -1,0 +1,125 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  background-image: url("./assets/images/banner.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.header {
+  &__wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 50px;
+    color: $c-main;
+    font-size: 40px;
+
+    .header__menu {
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 0%;
+        height: 2px;
+        background-color: $c-main;
+        transition: width 0.8s ease-in-out;
+      }
+
+      &:hover::after {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.main {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 10%;
+  color: $c-main;
+  &__quest{
+    font-size: 30px;
+    margin-bottom: 50px;
+    font-family: 'Times New Roman', Times, serif;
+  }
+}
+
+// 2 storinka
+
+.main__quest1 {
+  text-align: center;
+  max-width: 70%;
+  font-size: 30px;
+  color: $c-main;
+}
+#text-input1 {
+  width: 150px;
+  height: 50px;
+  font-size: 30px;
+}
+
+.button {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: silver;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.active {
+  background-color: orange;
+  color: #fff;
+}
+
+#text-input2 {
+  width: 350px;
+  height: 50px;
+  font-size: 30px;
+}
+
+.vidosik {
+  position: absolute;
+  left: 5%;
+  top: 20%;
+}
+
+.main__quest4 {
+  max-width: 30%;
+  font-size: 30px;
+  color: $c-main;
+  text-align: center;
+}
+
+.ticket {
+  position: absolute;
+  right: 15%;
+  top: 20%;
+}
+
+.videos {
+  background-color: #fff;
+  z-index: 99;
+  padding-left: 10%;
+}
